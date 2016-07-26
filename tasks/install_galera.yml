@@ -19,5 +19,5 @@
     - xinetd
     - git 
 
-- name: Start MySQL
-  command: /etc/init.d/mysql restart
+# - name: Start MySQL
+#   command: /etc/init.d/mysql restart
