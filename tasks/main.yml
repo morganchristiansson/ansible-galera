@@ -10,4 +10,4 @@
 - include: install_galera.yml
 - include: grants.yml
 - include: configure_galera.yml
-- include: clustercheck.yml
+#- include: clustercheck.yml
