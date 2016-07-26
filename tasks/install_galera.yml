@@ -23,5 +23,3 @@
 # - name: Start MySQL
 #   command: /etc/init.d/mysql restart
 
-  - name: Install mysql db
-    command: mysql_install_db --user=mysql
