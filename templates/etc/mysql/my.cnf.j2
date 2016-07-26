@@ -22,15 +22,15 @@ skip-name-resolve
 
 lc-messages-dir         = /usr/share/mysql
 skip-external-locking
-key_buffer              = 16M
+# key_buffer              = 16M
 max_connections         = 100
 max_allowed_packet      = 16M
 thread_stack            = 192K
 thread_cache_size       = 8
 
 myisam-recover          = BACKUP
-query_cache_limit       = 1M
-query_cache_size        = 16M
+# query_cache_limit       = 1M
+# query_cache_size        = 16M
 
 log_error               = /var/log/mysql/err.log
 slow_query_log          = 1
@@ -42,7 +42,7 @@ log_bin                 = /var/log/mysql/mysql-bin.log
 sync_binlog             = 1
 binlog_format           = ROW
 expire_logs_days        = 2
-max_binlog_size         = 100M
+# max_binlog_size         = 100M
 log_slave_updates
 
 wsrep_provider          = /usr/lib/libgalera_smm.so
@@ -68,10 +68,10 @@ innodb_autoinc_lock_mode        = 2
 # innodb_locks_unsafe_for_binlog  = 1
 innodb_file_per_table
 innodb_thread_concurrency       = 0
-innodb_buffer_pool_size         = 50M
-innodb_log_buffer_size          = 64M
+# innodb_buffer_pool_size         = 50M
+# innodb_log_buffer_size          = 64M
 # innodb_flush_method             = O_DIRECT
-innodb_log_file_size            = 500M
+# innodb_log_file_size            = 500M
 
 [mysqldump]
 quick
