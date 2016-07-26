@@ -7,10 +7,6 @@ galera_conf:
         xtrabackup:
             username: xtrabackup 
             password: xtrabackup 
-        docker:
-            username: docker 
-            password: docker 
-            host: 172.17.%
         clustercheck:
             username: clustercheck
             password: clustercheck
