@@ -42,6 +42,8 @@ wsrep_sst_method        = xtrabackup-v2
 wsrep_sst_auth          = {{ galera_conf['dbusers']['xtrabackup']['username'] }}:{{ galera_conf['dbusers']['xtrabackup']['password'] }}
 wsrep_cluster_name      = percona-cluster
 
+wsrep_dirty_reads       = ON
+
 wsrep_cluster_address   = gcomm://consul.service.discovery
 wsrep_node_name         = {{ ansible_eth0.ipv4.address }}
 
