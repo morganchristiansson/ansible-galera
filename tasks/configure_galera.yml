@@ -1,11 +1,5 @@
 ---
-- name: Stop Percona XtraDB Cluster server
-  service: name=mysql state=stopped
-  when: bootstrap_check.stdout == "bootstrap"
-
-- name: Configure and bootstrap Percona XtraDB Cluster server
+- name: Configure Percona XtraDB Cluster
   template: src=etc/mysql/my.cnf.j2
             dest=/etc/mysql/my.cnf
             mode=0640 owner=mysql group=root
-  notify: bootstrap node
-  when: bootstrap_check.stdout == "bootstrap"

@@ -1,15 +1,4 @@
 ---
-# file: tasks/install_galera.yml 
-# check if galera is already installed
-- name: check to determine if galera is aready installed
-  action: shell test -d /etc/mysql && echo "installed" || echo "bootstrap"
-  register: bootstrap_check 
-
-# Create link if not already exists. Upstart for mysql needs this! 
-# - name: create /etc/mysql if not exists 
-#  action: file path=/etc/mysql state=directory
-#  when: bootstrap_check.stdout == "bootstrap"
-
 - name: Install Percona XtraDB Cluster server
   apt: pkg={{ item }} 
        state=present
@@ -19,7 +8,3 @@
     - python-mysqldb
     - xinetd
     - git 
-
-# - name: Start MySQL
-#   command: /etc/init.d/mysql restart
-
